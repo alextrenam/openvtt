@@ -1,0 +1,33 @@
+import React from "react";
+
+export default function DraggableToken({ id, x, y, iconUrl, onDragEnd }) {
+  function handleDragStart(e) {
+    e.dataTransfer.setData("text/plain", id);
+  }
+
+  function handleDragEnd(e) {
+    // Calculate new position relative to container
+    const newX = e.clientX;
+    const newY = e.clientY;
+
+    onDragEnd(id, newX, newY);
+  }
+
+  return (
+    <img
+      src={iconUrl}
+      alt={id}
+      draggable="true"
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        width: 40,
+        height: 40,
+        cursor: "grab",
+      }}
+    />
+  );
+}

@@ -1,0 +1,19 @@
+import { useEffect, useState } from "react";
+import { ref, onValue } from "firebase/database";
+import { database } from "./firebase";
+
+export function useTokens() {
+  const [tokens, setTokens] = useState({});
+
+  useEffect(() => {
+    const tokensRef = ref(database, "tokens");
+    const unsubscribe = onValue(tokensRef, (snapshot) => {
+      const data = snapshot.val() || {};
+      setTokens(data);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  return tokens;
+}
