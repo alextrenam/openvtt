@@ -1,0 +1,6 @@
+{
+  "tokens": {
+    "token1": { "x": 100, "y": 100, "iconUrl": "/assets/blue.jpg" },
+    "token2": { "x": 200, "y": 150, "iconUrl": "/assets/red.jpg" }
+  }
+}
