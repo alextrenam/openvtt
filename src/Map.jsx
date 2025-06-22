@@ -22,7 +22,7 @@ export default function Map() {
 		position: "relative",
 		width: 800,
 		height: 600,
-		backgroundImage: `url('/assets/map.jpg')`,
+		backgroundImage: `url(${process.env.PUBLIC_URL}/assets/map.jpg)`,
 		backgroundSize: "cover",
 		border: "2px solid black",
 	    }}
@@ -33,7 +33,7 @@ export default function Map() {
 		    id={id}
 		    x={token.x}
 		    y={token.y}
-		    iconUrl={token.iconUrl}
+		    iconUrl={`${process.env.PUBLIC_URL}/${token.iconUrl}`}
 		    onDragEnd={updateTokenPosition}
 		/>
 	    ))}
