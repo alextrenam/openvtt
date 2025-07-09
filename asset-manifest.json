@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/openvtt/static/css/main.e6c13ad2.css",
-    "main.js": "/openvtt/static/js/main.90f47402.js",
+    "main.js": "/openvtt/static/js/main.8993c8ce.js",
     "static/js/453.5e1cf93b.chunk.js": "/openvtt/static/js/453.5e1cf93b.chunk.js",
     "index.html": "/openvtt/index.html",
     "main.e6c13ad2.css.map": "/openvtt/static/css/main.e6c13ad2.css.map",
-    "main.90f47402.js.map": "/openvtt/static/js/main.90f47402.js.map",
+    "main.8993c8ce.js.map": "/openvtt/static/js/main.8993c8ce.js.map",
     "453.5e1cf93b.chunk.js.map": "/openvtt/static/js/453.5e1cf93b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.90f47402.js"
+    "static/js/main.8993c8ce.js"
   ]
 }
