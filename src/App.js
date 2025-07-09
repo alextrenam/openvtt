@@ -1,13 +1,12 @@
 import React from "react";
-import Map from "./Map";
+import MapScene from "./MapScene";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>D&D Encounter Map</h1>
-      <Map />
-    </div>
-  );
+    return (
+	<div className="App">
+	    <MapScene/>
+	</div>
+    );
 }
 
 export default App;

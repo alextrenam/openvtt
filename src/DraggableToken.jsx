@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-export default function DraggableToken({ id, x, y, iconUrl, onDragEnd }) {
+export default function DraggableToken({ id, x, y, iconUrl, onDragEnd, tokenType }) {
     const [position, setPosition] = useState({ x, y });
     const positionRef = useRef({ x, y });
     const dragging = useRef(false);
@@ -43,6 +43,13 @@ export default function DraggableToken({ id, x, y, iconUrl, onDragEnd }) {
 	onDragEnd(id, x, y); // update Firebase
     }
 
+    const borderColours = {
+	player: "dodgerblue",
+	enemy: "crimson",
+	neutral: "gray",
+	ally: "limegreen",
+    };
+
     return (
 	<img
 	    src={iconUrl}
@@ -50,11 +57,20 @@ export default function DraggableToken({ id, x, y, iconUrl, onDragEnd }) {
 	    onPointerDown={handlePointerDown}
 	    style={{
 		position: "absolute",
+		zIndex: 20,
 		left: position.x,
 		top: position.y,
-		width: 40,
-		height: 40,
-		cursor: "grab",
+		width: 48,
+		height: 48,
+		borderRadius: "50%",
+		overflow: "hidden",
+		border: `4px solid ${borderColours[tokenType] || "black"}`,
+		boxSizing: "border-box",
+		backgroundColor: "white",
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center",
+		cursor: dragging.current ? "grabbing" : "grab",
 		userSelect: "none",
 	    }}
 	/>
