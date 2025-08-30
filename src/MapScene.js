@@ -9,7 +9,7 @@ import ToolSelector from "./ToolSelector";
 
 export default function MapScene() {
     useEffect(() => {
-	document.title = "Bellevue Inn - OpenVTT";
+	document.title = "OpenVTT";
     }, []);
 
     const [tokens, setTokens] = useTokens();

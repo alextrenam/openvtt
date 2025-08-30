@@ -8,7 +8,7 @@ export default function MapLayer({ width, height, children }) {
             height,
             backgroundImage: `url(${process.env.PUBLIC_URL}/assets/map.jpg)`,
             backgroundSize: "cover",
-            border: "2px solid black",
+            border: "4px solid black",
             overflow: "hidden",
 	}}
 	    >

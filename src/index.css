@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Container for map + sidebar */
+.app-container {
+  display: flex;          /* Arrange children horizontally */
+  height: 100vh;          /* Fill viewport height */
+  width: 100vw;           /* Fill viewport width */
+}
+
+/* Map takes remaining space */
+.map-container {
+  flex: 1;                /* Fills remaining horizontal space */
+  background-color: #eee; /* Just for visibility */
+  overflow: auto;
+}
+
+/* Sidebar fixed width */
+.sidebar {
+  width: 350px;
+  background-color: #222;
+  color: white;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-y: auto;       /* Scroll if too tall */
+}
+
+/* Each character row: image + text horizontally */
+.character-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #333;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.character-row:hover {
+  background-color: #444;
+}
+
+/* Character image */
+.character-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px solid grey;
+  object-fit: cover;
+}
+
+/* Name + description stacked vertically */
+.character-text {
+  display: flex;
+  flex-direction: column;
+}
