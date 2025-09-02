@@ -15,8 +15,6 @@ export default function MapScene() {
     const [tokens, setTokens] = useTokens();
     const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
-    const scaleFactor = 0.1;
-    
     // Dynamically resize map
     useEffect(() => {
 	const handleResize = () => {
@@ -30,6 +28,9 @@ export default function MapScene() {
     const mapHeight = windowHeight;
     const mapWidth = mapHeight * aspectRatio;
 
+    const mapHeightInGameUnits = 160;
+    const scaleFactor = mapHeightInGameUnits / mapHeight;
+    
     // Toggle between modes: ruler, fog, null
     const [activeTool, setActiveTool] = useState(null);
 
@@ -55,7 +56,7 @@ export default function MapScene() {
     return (
 	    <MapLayer width={mapWidth} height={mapHeight}>
 	    <FogCanvas width={mapWidth} height={mapHeight} fogEraseMode={activeTool === "fog"} />
-	    <TokenLayer tokens={tokens} setTokens={setTokens} />
+	    <TokenLayer tokens={tokens} setTokens={setTokens} mapWidth={mapWidth} mapHeight={mapHeight}/>
 	    <RulerOverlay width={mapWidth} height={mapHeight} scaleFactor={scaleFactor} rulerMode={activeTool === "ruler"} />
 	    <AreaOverlay width={mapWidth} height={mapHeight} scaleFactor={scaleFactor} areaMode={activeTool === 'area'} />
 	    <ToolSelector activeTool={activeTool} setActiveTool={setActiveTool} />

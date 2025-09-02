@@ -8,6 +8,21 @@ const characters = [
     name: "Goldborn Thimble",
     description: "Innkeeper at the Bellevue Inn in River Bend",
     imageUrl: `${process.env.PUBLIC_URL}/assets/goldborn.png`
+  },
+  {
+    name: "Hugh Jassolini",
+    description: "Just a huge ass dude",
+    imageUrl: `${process.env.PUBLIC_URL}/assets/hugh.png`
+  },
+  {
+    name: "Chungus Alpha-Strike",
+    description: "Something about those eyes seems shady...",
+    imageUrl: `${process.env.PUBLIC_URL}/assets/chungus.jpg`
+  },
+  {
+    name: "Tritus Basilcoch",
+    description: "Has been known to get a little sautéed on the booze",
+    imageUrl: `${process.env.PUBLIC_URL}/assets/tritus.png`
   }
 ];
 
