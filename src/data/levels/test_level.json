@@ -1,0 +1,23 @@
+{
+    "name": "Giant Insect Den",
+    "map": {
+	"src": "/assets/banowain.png",
+	"gridSize": 50
+    },
+    "tokens": [
+	{
+	    "id": "goblin1",
+	    "characterName": "Banowain",
+	    "x": 200,
+	    "y": 150,
+	    "size": 1
+	},
+	{
+	    "id": "hobgoblin",
+	    "characterName": "Hobgoblin Captain",
+	    "x": 400,
+	    "y": 250,
+	    "size": 2
+	}
+    ]
+}

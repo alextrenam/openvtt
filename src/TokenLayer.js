@@ -1,11 +1,16 @@
-import { ref, set } from "firebase/database";
-import { database } from "./firebase";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "./firebase"; // Firestore instance
 import DraggableToken from "./DraggableToken";
 
-export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight }) {
-    function updateTokenPosition(id, x, y) {
-	set(ref(database, `tokens/${id}`), {
-	    ...tokens[id],
+export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, levelId }) {
+    // Update token position in Firestore
+    async function updateTokenPosition(id, x, y) {
+	console.log("levelId:", levelId, "id:", id);
+	const tokenData = tokens[id];
+	if (!tokenData) return;
+
+	await setDoc(doc(db, "levels", levelId, "tokens", id), {
+	    ...tokenData,
 	    x,
 	    y,
 	});

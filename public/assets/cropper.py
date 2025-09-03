@@ -1,6 +1,6 @@
 from PIL import Image
 
-img = Image.open("chungus.jpg")
+img = Image.open("tritus.jpg")
 width, height = img.size
 size = min(width, height)
 

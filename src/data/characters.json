@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Banowain",
+    "description": "An aging man with a surprising fighting prowess",
+    "imageUrl": "/assets/banowain.png"
+  },
+  {
+    "name": "Goldborn Thimble",
+    "description": "Innkeeper at the Bellevue Inn in River Bend (next to a bend in the river)",
+    "imageUrl": "/assets/goldborn.png"
+  },
+  {
+    "name": "Hugh Jassolini",
+    "description": "Just a huge ass dude",
+    "imageUrl": "/assets/hugh.png"
+  },
+  {
+    "name": "Chungus Alpha-Strike",
+    "description": "Something about those eyes seems shady...",
+    "imageUrl": "/assets/chungus.jpg"
+  },
+  {
+    "name": "Tritus Basilcoch",
+    "description": "Has been known to get a little sautéed on the booze",
+    "imageUrl": "/assets/tritus.jpg"
+  }
+]

@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
-import { ref, onValue } from "firebase/database";
-import { database } from "./firebase";
+import { collection, onSnapshot } from "firebase/firestore";
+import { db } from "./firebase";
 
-export function useTokens() {
+export function useTokens(levelId) {
     const [tokens, setTokens] = useState({});
 
     useEffect(() => {
-	const tokensRef = ref(database, "tokens");
+	if (!levelId) return;
 
-	const unsubscribe = onValue(tokensRef, (snapshot) => {
-	    const data = snapshot.val() || {};
+	const tokensCol = collection(db, "levels", levelId, "tokens");
+	const unsubscribe = onSnapshot(tokensCol, (snapshot) => {
+	    const data = {};
+	    snapshot.forEach((docSnap) => {
+		data[docSnap.id] = docSnap.data(); // <-- doc.id becomes the key
+	    });
 	    setTokens(data);
 	});
 
-	// Clean up listener on unmount
 	return () => unsubscribe();
-    }, []);
+    }, [levelId]);
 
     return [tokens, setTokens];
 }
