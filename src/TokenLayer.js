@@ -2,10 +2,9 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "./firebase"; // Firestore instance
 import DraggableToken from "./DraggableToken";
 
-export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, levelId }) {
+export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, levelId, scaleFactor }) {
     // Update token position in Firestore
     async function updateTokenPosition(id, x, y) {
-	console.log("levelId:", levelId, "id:", id);
 	const tokenData = tokens[id];
 	if (!tokenData) return;
 
@@ -30,6 +29,14 @@ export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, lev
 		iconUrl={`${process.env.PUBLIC_URL}/${token.iconUrl}`}
 		onDragEnd={updateTokenPosition}
 		tokenType={token.tokenType}
+		tokenSize={token.size}
+		scaleFactor={scaleFactor}
+		locked={token.locked ?? false}
+		onToggleLock={(id, newState) => {
+		    // Save lock toggle
+		    const tokenRef = doc(db, "levels", levelId, "tokens", id);
+		    setDoc(tokenRef, { locked: newState }, { merge: true });
+		}}
 		    />
 	    ))}
 	</>

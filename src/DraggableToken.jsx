@@ -2,16 +2,19 @@ import React, { useState, useRef, useEffect } from "react";
 
 export default function DraggableToken({
     id,
-    u, // relative horizontal position (0..1)
-    v, // relative vertical position (0..1)
+    u,
+    v,
     mapWidth,
     mapHeight,
     iconUrl,
-    onDragEnd, // called with (id, newU, newV)
+    onDragEnd,
     tokenType,
+    tokenSize,
     label,
+    scaleFactor,
+    locked, // NEW: comes from Firestore
+    onToggleLock, // NEW: callback to toggle lock in parent/Firestore
 }) {
-    // Convert relative (u,v) to pixel coords
     function relToPx(u, v) {
         return { x: u * mapWidth, y: v * mapHeight };
     }
@@ -26,7 +29,7 @@ export default function DraggableToken({
     const dragging = useRef(false);
     const offset = useRef({ x: 0, y: 0 });
 
-    // Update local position if props change and not dragging
+    // Update position if props change and not dragging
     useEffect(() => {
         if (!dragging.current) {
             const x = u * mapWidth;
@@ -38,6 +41,15 @@ export default function DraggableToken({
 
     function handlePointerDown(e) {
         e.preventDefault();
+
+        if (e.button === 2) {
+            // right click = toggle lock
+            onToggleLock(id, !locked);
+            return;
+        }
+
+        if (locked) return; // don’t drag if locked
+
         dragging.current = true;
         offset.current = {
             x: e.clientX - position.x,
@@ -58,13 +70,14 @@ export default function DraggableToken({
     }
 
     function handlePointerUp() {
+        if (!dragging.current) return;
         dragging.current = false;
         window.removeEventListener("pointermove", handlePointerMove);
         window.removeEventListener("pointerup", handlePointerUp);
 
         const { x, y } = positionRef.current;
         const { u: newU, v: newV } = pxToRel(x, y);
-        onDragEnd(id, newU, newV); // update Firebase with relative coords
+        onDragEnd(id, newU, newV);
     }
 
     const borderColours = {
@@ -74,27 +87,41 @@ export default function DraggableToken({
         ally: "limegreen",
     };
 
+    const tokenSizes = {
+        tiny: 30,
+        small: 40,
+        normal: 48,
+        large: 58,
+        huge: 80,
+    };
+
     return (
         <div
             onPointerDown={handlePointerDown}
+            onContextMenu={(e) => e.preventDefault()} // disable browser menu
             style={{
                 position: "absolute",
-                zIndex: 20,
+                zIndex: tokenType === "enemy" ? 5 : 20,
                 left: position.x,
                 top: position.y,
-                width: 48,
+                width: tokenSizes[tokenSize] * scaleFactor,
                 textAlign: "center",
-                cursor: dragging.current ? "grabbing" : "grab",
+                cursor: locked
+                    ? "default"
+                    : dragging.current
+                    ? "grabbing"
+                    : "grab",
                 userSelect: "none",
-                transform: "translate(-50%, -50%)", // center on coordinates
+                transform: "translate(-50%, -50%)",
+                opacity: locked ? 0.7 : 1, // optional visual cue
             }}
         >
             <img
                 src={iconUrl}
                 alt={id}
                 style={{
-                    width: 48,
-                    height: 48,
+                    width: tokenSizes[tokenSize] * scaleFactor,
+                    height: tokenSizes[tokenSize] * scaleFactor,
                     borderRadius: "50%",
                     border: `4px solid ${borderColours[tokenType] || "black"}`,
                     backgroundColor: "white",
@@ -115,3 +142,131 @@ export default function DraggableToken({
         </div>
     );
 }
+
+// import React, { useState, useRef, useEffect } from "react";
+
+// export default function DraggableToken({
+//     id,
+//     u, // relative horizontal position (0..1)
+//     v, // relative vertical position (0..1)
+//     mapWidth,
+//     mapHeight,
+//     iconUrl,
+//     onDragEnd, // called with (id, newU, newV)
+//     tokenType,
+//     tokenSize,
+//     label,
+//     scaleFactor,
+// }) {
+//     // Convert relative (u,v) to pixel coords
+//     function relToPx(u, v) {
+//         return { x: u * mapWidth, y: v * mapHeight };
+//     }
+
+//     function pxToRel(x, y) {
+//         return { u: x / mapWidth, v: y / mapHeight };
+//     }
+
+//     const initialPx = relToPx(u, v);
+//     const [position, setPosition] = useState(initialPx);
+//     const positionRef = useRef(initialPx);
+//     const dragging = useRef(false);
+//     const offset = useRef({ x: 0, y: 0 });
+
+//     // Update local position if props change and not dragging
+//     useEffect(() => {
+//         if (!dragging.current) {
+//             const x = u * mapWidth;
+//             const y = v * mapHeight;
+//             setPosition({ x, y });
+//             positionRef.current = { x, y };
+//         }
+//     }, [u, v, mapWidth, mapHeight]);
+
+//     function handlePointerDown(e) {
+//         e.preventDefault();
+//         dragging.current = true;
+//         offset.current = {
+//             x: e.clientX - position.x,
+//             y: e.clientY - position.y,
+//         };
+
+//         window.addEventListener("pointermove", handlePointerMove);
+//         window.addEventListener("pointerup", handlePointerUp);
+//     }
+
+//     function handlePointerMove(e) {
+//         e.preventDefault();
+//         if (!dragging.current) return;
+//         const newX = e.clientX - offset.current.x;
+//         const newY = e.clientY - offset.current.y;
+//         setPosition({ x: newX, y: newY });
+//         positionRef.current = { x: newX, y: newY };
+//     }
+
+//     function handlePointerUp() {
+//         dragging.current = false;
+//         window.removeEventListener("pointermove", handlePointerMove);
+//         window.removeEventListener("pointerup", handlePointerUp);
+
+//         const { x, y } = positionRef.current;
+//         const { u: newU, v: newV } = pxToRel(x, y);
+//         onDragEnd(id, newU, newV); // update Firebase with relative coords
+//     }
+
+//     const borderColours = {
+//         player: "dodgerblue",
+//         enemy: "crimson",
+//         neutral: "gray",
+//         ally: "limegreen",
+//     };
+
+//     const tokenSizes = {
+// 	tiny: 30,
+// 	small: 40,
+// 	normal: 48,
+// 	large: 58,
+// 	huge: 80,
+//     };
+
+//     return (
+//         <div
+//             onPointerDown={handlePointerDown}
+//             style={{
+//                 position: "absolute",
+//                 zIndex: tokenType === "enemy" ? 5 : 20,
+//                 left: position.x,
+//                 top: position.y,
+// 		width: tokenSizes[tokenSize] * scaleFactor,
+//                 textAlign: "center",
+//                 cursor: dragging.current ? "grabbing" : "grab",
+//                 userSelect: "none",
+//                 transform: "translate(-50%, -50%)", // center on coordinates
+//             }}
+//         >
+//             <img
+//                 src={iconUrl}
+//                 alt={id}
+//                 style={{
+// 		    width: tokenSizes[tokenSize] * scaleFactor,
+// 		    height: tokenSizes[tokenSize] * scaleFactor,
+//                     borderRadius: "50%",
+//                     border: `4px solid ${borderColours[tokenType] || "black"}`,
+//                     backgroundColor: "white",
+//                     boxSizing: "border-box",
+//                     display: "block",
+//                 }}
+//             />
+//             <div
+//                 style={{
+//                     marginTop: 4,
+//                     fontSize: 12,
+//                     color: "white",
+//                     textShadow: "1px 1px 2px black",
+//                 }}
+//             >
+//                 {label || id}
+//             </div>
+//         </div>
+//     );
+// }
