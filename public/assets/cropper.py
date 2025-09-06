@@ -1,6 +1,6 @@
 from PIL import Image
 
-img = Image.open("tritus.jpg")
+img = Image.open("mermaid.png")
 width, height = img.size
 size = min(width, height)
 
@@ -10,4 +10,4 @@ right = left + size
 bottom = top + size
 
 img_cropped = img.crop((left, top, right, bottom))
-img_cropped.save("output.jpg")
+img_cropped.save("output.png")

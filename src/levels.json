@@ -2,97 +2,191 @@
     "levels": {
 	"testLevel": {
 	    "map": {
-		"scale": 1, "url": "assets/map.jpg"
+		"scale": 1,
+		"url": "assets/map.jpg"
 	    },
 	    "tokens": {
-		"token1": {"tokenType": "player",
-			   "label": "Chungus",
-			   "iconUrl": "assets/chungus.jpg",
-			   "size": "normal",
-			   "init_x": 0.4,
-			   "init_y": 0.5,
-			   "x": 0.4,
-			   "y": 0.5,
-			   "locked": false},
-		"token2": {"tokenType": "player",
-			   "label": "Hugh",
-			   "iconUrl": "assets/hugh.png",
-			   "size": "large",
-			   "init_x": 0.5,
-			   "init_y": 0.5,
-			   "x": 0.5,
-			   "y": 0.5,
-			   "locked": false},
-		"token3": {"tokenType": "player",
-			   "label": "Tritus",
-			   "iconUrl": "assets/tritus.jpg",
-			   "size": "normal",
-			   "init_x": 0.5,
-			   "init_y": 0.6,
-			   "x": 0.5,
-			   "y": 0.6,
-			   "locked": false},
-		"token4": {"tokenType": "ally",
-			   "label": "Banowain",
-			   "iconUrl": "assets/banowain.png",
-			   "size": "normal",
-			   "init_x": 0.4,
-			   "init_y": 0.4,
-			   "x": 0.4,
-			   "y": 0.4,
-			   "locked": false},
-		"token5": {"tokenType": "enemy",
-			   "label": "Giant Spider",
-			   "iconUrl": "assets/giant_spider.png",
-			   "size": "huge",
-			   "init_x": 0.7,
-			   "init_y": 0.3,
-			   "x": 0.7,
-			   "y": 0.3,
-			   "locked": true}
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Chungus",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "normal",
+		    "init_x": 0.4,
+		    "init_y": 0.5,
+		    "x": 0.4,
+		    "y": 0.5,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Hugh",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "large",
+		    "init_x": 0.5,
+		    "init_y": 0.5,
+		    "x": 0.5,
+		    "y": 0.5,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "normal",
+		    "init_x": 0.5,
+		    "init_y": 0.6,
+		    "x": 0.5,
+		    "y": 0.6,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "ally",
+		    "label": "Banowain",
+		    "iconUrl": "assets/banowain.png",
+		    "size": "normal",
+		    "init_x": 0.4,
+		    "init_y": 0.4,
+		    "x": 0.4,
+		    "y": 0.4,
+		    "locked": false
+		},
+		"token5": {
+		    "tokenType": "enemy",
+		    "label": "Giant Spider",
+		    "iconUrl": "assets/giant_spider.png",
+		    "size": "huge",
+		    "init_x": 0.7,
+		    "init_y": 0.3,
+		    "x": 0.7,
+		    "y": 0.3,
+		    "locked": true
+		}
 	    }
 	},
 	"riverBend": {
 	    "map": {
-		"scale": 0.8, "url": "assets/river_bend.jpg"
+		"scale": 0.6,
+		"url": "assets/river_bend.png"
 	    },
 	    "tokens": {
-		"token1": {"tokenType": "player",
-			   "label": "Chungus",
-			   "iconUrl": "assets/chungus.jpg",
-			   "size": "normal",
-			   "init_x": 0.4,
-			   "init_y": 0.5,
-			   "x": 0.4,
-			   "y": 0.5,
-			   "locked": false},
-		"token2": {"tokenType": "player",
-			   "label": "Hugh",
-			   "iconUrl": "assets/hugh.png",
-			   "size": "large",
-			   "init_x": 0.5,
-			   "init_y": 0.5,
-			   "x": 0.5,
-			   "y": 0.5,
-			   "locked": false},
-		"token3": {"tokenType": "player",
-			   "label": "Tritus",
-			   "iconUrl": "assets/tritus.jpg",
-			   "size": "normal",
-			   "init_x": 0.5,
-			   "init_y": 0.6,
-			   "x": 0.5,
-			   "y": 0.6,
-			   "locked": false},
-		"token4": {"tokenType": "ally",
-			   "label": "Banowain",
-			   "iconUrl": "assets/banowain.png",
-			   "size": "normal",
-			   "init_x": 0.4,
-			   "init_y": 0.4,
-			   "x": 0.4,
-			   "y": 0.4,
-			   "locked": false}
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Chungus",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "normal",
+		    "init_x": 0.95,
+		    "init_y": 0.47,
+		    "x": 0.95,
+		    "y": 0.47,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Hugh",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "large",
+		    "init_x": 0.98,
+		    "init_y": 0.47,
+		    "x": 0.98,
+		    "y": 0.47,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "normal",
+		    "init_x": 0.97,
+		    "init_y": 0.51,
+		    "x": 0.97,
+		    "y": 0.51,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "ally",
+		    "label": "Banowain",
+		    "iconUrl": "assets/banowain.png",
+		    "size": "normal",
+		    "init_x": 0.95,
+		    "init_y": 0.51,
+		    "x": 0.95,
+		    "y": 0.51,
+		    "locked": false
+		}
+	    }
+	},
+	"fairyPools": {
+	    "map": {
+		"scale": 0.9,
+		"url": "assets/fairy_pools.png"
+	    },
+	    "tokens": {
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Chungus",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "normal",
+		    "init_x": 0.92,
+		    "init_y": 0.89,
+		    "x": 0.92,
+		    "y": 0.89,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Hugh",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "large",
+		    "init_x": 0.87,
+		    "init_y": 0.93,
+		    "x": 0.87,
+		    "y": 0.93,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "normal",
+		    "init_x": 0.96,
+		    "init_y": 0.94,
+		    "x": 0.96,
+		    "y": 0.94,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "enemy",
+		    "label": "Mermaid",
+		    "iconUrl": "assets/mermaid.png",
+		    "size": "normal",
+		    "init_x": 0.86,
+		    "init_y": 0.41,
+		    "x": 0.86,
+		    "y": 0.41,
+		    "locked": true
+		},
+		"token5": {
+		    "tokenType": "enemy",
+		    "label": "Mermaid",
+		    "iconUrl": "assets/mermaid.png",
+		    "size": "normal",
+		    "init_x": 0.46,
+		    "init_y": 0.47,
+		    "x": 0.46,
+		    "y": 0.47,
+		    "locked": true
+		},
+		"token6": {
+		    "tokenType": "enemy",
+		    "label": "Mermaid",
+		    "iconUrl": "assets/mermaid.png",
+		    "size": "normal",
+		    "init_x": 0.77,
+		    "init_y": 0.73,
+		    "x": 0.77,
+		    "y": 0.73,
+		    "locked": true
+		}
 	    }
 	}
     }
