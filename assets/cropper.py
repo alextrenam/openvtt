@@ -1,13 +1,13 @@
 from PIL import Image
 
-img = Image.open("chungus.jpg")
+img = Image.open("bandit_shaman.png")
 width, height = img.size
 size = min(width, height)
 
 left = int(0.5 * (width - size))
-top = int(0.1 * (height - size))
+top = int(0.4 * (height - size))
 right = left + size
 bottom = top + size
 
 img_cropped = img.crop((left, top, right, bottom))
-img_cropped.save("output.jpg")
+img_cropped.save("output.png")
