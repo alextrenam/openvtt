@@ -85,6 +85,8 @@ export default function MapScene({ initialLevelId }) {
                 setLevelId("fairyPools");
             } else if (e.key === "3") {
                 setLevelId("bugDen");
+            } else if (e.key === "4") {
+                setLevelId("gorgeAmbush");
             }
         };
         window.addEventListener("keydown", handleKeyDown);
