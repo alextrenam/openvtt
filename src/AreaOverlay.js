@@ -31,11 +31,19 @@ export default function AreaOverlay({ width, height, scaleFactor, areaMode }) {
 	    if (mousePos) {
 		ctx.fillStyle = "white";
 		ctx.font = "bold 16px sans-serif";
+		ctx.shadowColor = "rgba(0,0,0,0.7)";
+		ctx.shadowBlur = 4;
+		ctx.shadowOffsetX = 2;
+		ctx.shadowOffsetY = 2;
 		ctx.fillText(
 		    `${Math.round(scaleFactor * radius)} ft`,
 		    mousePos.x + 10,
 		    mousePos.y - 10
 		);
+		ctx.shadowColor = "transparent";
+		ctx.shadowBlur = 0;
+		ctx.shadowOffsetX = 0;
+		ctx.shadowOffsetY = 0;
 	    }
 	};
 

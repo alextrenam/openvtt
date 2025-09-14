@@ -7,7 +7,7 @@ function App() {
     return (
 	<div className="app-container">
 	    <div className="map-container">
-		<MapScene levelId="testLevel"/>
+		<MapScene levelId="snowballFight"/>
 	    </div>
 	    <CharacterList/>
 	    <LevelLoader/>

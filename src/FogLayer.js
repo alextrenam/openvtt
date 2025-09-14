@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState, useLayoutEffect, useCallback } from "react";
-import { doc, setDoc, onSnapshot } from "firebase/firestore";
+import { useEffect, useRef, useLayoutEffect, useCallback } from "react";
+import { doc, setDoc, onSnapshot, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase"; // Firestore instance
 
 export default function FogCanvas({ width, height, fogEraseMode, levelId }) {
@@ -15,9 +15,12 @@ export default function FogCanvas({ width, height, fogEraseMode, levelId }) {
 	if (!canvas) return;
 	const imageData = canvas.toDataURL("image/png");
 
-	await setDoc(doc(db, fogPath), { image: imageData });
+	// await setDoc(doc(db, fogPath), { image: imageData });
+	await setDoc(doc(db, fogPath), { image: imageData, updatedAt: serverTimestamp() }, { merge: true });
 	fogImageRef.current = new Image();
 	fogImageRef.current.src = imageData;
+
+	
     };
 
     // Redraw current fog image onto canvas
@@ -125,13 +128,34 @@ export default function FogCanvas({ width, height, fogEraseMode, levelId }) {
 	const canvas = canvasRef.current;
 	if (!canvas) return;
 	const ctx = canvas.getContext("2d");
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	// ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "black";
 	ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 	saveFogToFirebase();
     };
+    
+    // --- Clear fog completely when "c" is pressed ---
+    const clearFog = () => {
+	const canvas = canvasRef.current;
+	if (!canvas) return;
+	const ctx = canvas.getContext("2d");
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+	// Push the empty canvas to Firestore so others see it too
+	saveFogToFirebase();
+	
+    };
+
+    useEffect(() => {
+	const handleKey = (e) => {
+            if (e.key.toLowerCase() === "c") {
+		clearFog();
+            }
+	};
+	window.addEventListener("keydown", handleKey);
+	return () => window.removeEventListener("keydown", handleKey);
+    }, [clearFog]);
     return (
 	    <>
 	    <canvas

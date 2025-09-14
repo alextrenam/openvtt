@@ -115,6 +115,121 @@
 		}
 	    }
 	},
+	"snowballFight": {
+	    "map": {
+		"scale": 1,
+		"url": "assets/snowball_fight.png"
+	    },
+	    "tokens": {
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Tombola",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "small",
+		    "init_x": 0.76,
+		    "init_y": 0.43,
+		    "x": 0.76,
+		    "y": 0.43,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "ally",
+		    "label": "Gala",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "small",
+		    "init_x": 0.52,
+		    "init_y": 0.12,
+		    "x": 0.52,
+		    "y": 0.12,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "small",
+		    "init_x": 0.33,
+		    "init_y": 0.39,
+		    "x": 0.33,
+		    "y": 0.39,
+		    "locked": false
+		}
+	    }
+	},
+	"soldierCamp": {
+	    "map": {
+		"scale": 1,
+		"url": "assets/soldier_camp.png"
+	    },
+	    "tokens": {
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Tombola",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "small",
+		    "init_x": 0.05,
+		    "init_y": 0.69,
+		    "x": 0.05,
+		    "y": 0.69,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "small",
+		    "init_x": 0.04,
+		    "init_y": 0.76,
+		    "x": 0.04,
+		    "y": 0.76,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "enemy",
+		    "label": "Soldier Captain",
+		    "iconUrl": "assets/bandit_shaman.png",
+		    "size": "normal",
+		    "init_x": 0.6,
+		    "init_y": 0.5,
+		    "x": 0.6,
+		    "y": 0.5,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "enemy",
+		    "label": "Soldier",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.6,
+		    "init_y": 0.6,
+		    "x": 0.6,
+		    "y": 0.6,
+		    "locked": false
+		},
+		"token5": {
+		    "tokenType": "enemy",
+		    "label": "Soldier",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.7,
+		    "init_y": 0.5,
+		    "x": 0.7,
+		    "y": 0.5,
+		    "locked": false
+		},
+		"token6": {
+		    "tokenType": "enemy",
+		    "label": "Soldier",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.7,
+		    "init_y": 0.7,
+		    "x": 0.7,
+		    "y": 0.7,
+		    "locked": false
+		}
+	    }
+	},
 	"fairyPools": {
 	    "map": {
 		"scale": 0.9,

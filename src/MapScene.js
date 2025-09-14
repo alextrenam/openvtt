@@ -77,7 +77,7 @@ export default function MapScene({ initialLevelId }) {
                 setActiveTool((t) => (t === "fog" ? null : "fog"));
             } else if (e.key === "Escape") {
                 setActiveTool(null);
-            } else if (e.key === "l" || e.key === "L") {
+            } else if (e.key.toLowerCase() === "l") {
                 resetLevel();
             } else if (e.key === "1") {
                 setLevelId("riverBend");
