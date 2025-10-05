@@ -32,7 +32,7 @@
 		    "tokenType": "player",
 		    "label": "Tritus",
 		    "iconUrl": "assets/tritus.jpg",
-		    "size": "normal",
+		    "size": "tiny",
 		    "init_x": 0.5,
 		    "init_y": 0.6,
 		    "x": 0.5,
@@ -470,6 +470,186 @@
 		    "init_y": 0.80,
 		    "x": 0.24,
 		    "y": 0.80,
+		    "locked": true
+		}
+	    }
+	},
+	"tulstone": {
+	    "map": {
+		"scale": 0.1,
+		"url": "assets/tulstone.png"
+	    },
+	    "tokens": {}
+	},
+	"tulstoneSewers": {
+	    "map": {
+		"scale": 0.8,
+		"url": "assets/tulstone_sewers.png"
+	    },
+	    "tokens": {
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Chungus",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "normal",
+		    "init_x": 0.96,
+		    "init_y": 0.2,
+		    "x": 0.96,
+		    "y": 0.2,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Hugh",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "large",
+		    "init_x": 0.93,
+		    "init_y": 0.19,
+		    "x": 0.93,
+		    "y": 0.19,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "normal",
+		    "init_x": 0.99,
+		    "init_y": 0.22,
+		    "x": 0.99,
+		    "y": 0.22,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.72,
+		    "init_y": 0.52,
+		    "x": 0.72,
+		    "y": 0.56,
+		    "locked": true
+		},
+		"token5": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.59,
+		    "init_y": 0.46,
+		    "x": 0.59,
+		    "y": 0.46,
+		    "locked": true
+		},
+		"token6": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.64,
+		    "init_y": 0.65,
+		    "x": 0.64,
+		    "y": 0.65,
+		    "locked": true
+		},
+		"token7": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.64,
+		    "init_y": 0.70,
+		    "x": 0.64,
+		    "y": 0.70,
+		    "locked": true
+		},
+		"token8": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.56,
+		    "init_y": 0.62,
+		    "x": 0.56,
+		    "y": 0.62,
+		    "locked": true
+		},
+		"token9": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.51,
+		    "init_y": 0.69,
+		    "x": 0.51,
+		    "y": 0.69,
+		    "locked": true
+		},
+		"token10": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.60,
+		    "init_y": 0.62,
+		    "x": 0.60,
+		    "y": 0.62,
+		    "locked": true
+		},
+		"token11": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.53,
+		    "init_y": 0.64,
+		    "x": 0.53,
+		    "y": 0.64,
+		    "locked": true
+		},
+		"token12": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.17,
+		    "init_y": 0.20,
+		    "x": 0.17,
+		    "y": 0.20,
+		    "locked": true
+		},
+		"token13": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.17,
+		    "init_y": 0.15,
+		    "x": 0.17,
+		    "y": 0.15,
+		    "locked": true
+		},
+		"token14": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.20,
+		    "init_y": 0.17,
+		    "x": 0.20,
+		    "y": 0.17,
+		    "locked": true
+		},
+		"token15": {
+		    "tokenType": "enemy",
+		    "label": "Sewer Dweller",
+		    "iconUrl": "assets/sewer_dweller.png",
+		    "size": "normal",
+		    "init_x": 0.80,
+		    "init_y": 0.95,
+		    "x": 0.80,
+		    "y": 0.95,
 		    "locked": true
 		}
 	    }

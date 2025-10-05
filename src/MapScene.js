@@ -80,14 +80,10 @@ export default function MapScene({ initialLevelId }) {
             } else if (e.key.toLowerCase() === "l") {
                 resetLevel();
             } else if (e.key === "1") {
-                setLevelId("riverBend");
+                setLevelId("tulstone");
             } else if (e.key === "2") {
-                setLevelId("fairyPools");
-            } else if (e.key === "3") {
-                setLevelId("bugDen");
-            } else if (e.key === "4") {
-                setLevelId("gorgeAmbush");
-            }
+                setLevelId("tulstoneSewers");
+	    }
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
