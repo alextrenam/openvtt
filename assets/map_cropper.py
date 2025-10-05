@@ -1,13 +1,13 @@
 from PIL import Image
 
-img = Image.open("sewer_dweller.png")
+img = Image.open("tulstone_sewers.png")
 width, height = img.size
-size = min(width, height)
+size = 0.9 * width
 
-left = int(0.5 * (width - size))
-top = int(0.1 * (height - size))
+left = 0.1 * width
+top = 0.0
 right = left + size
-bottom = top + size
+bottom = height
 
 img_cropped = img.crop((left, top, right, bottom))
 img_cropped.save("output.png")
