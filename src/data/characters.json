@@ -1,7 +1,7 @@
 [
   {
     "name": "Banowain",
-    "description": "An aging man with a surprising fighting prowess",
+      "description": "An aging man with a surprising fighting prowess, he asked the party to look for his missing brother",
     "imageUrl": "/assets/banowain.png"
   },
   {
@@ -23,5 +23,105 @@
     "name": "Tritus Basilcoch",
     "description": "Has been known to get a little sautéed on the booze",
     "imageUrl": "/assets/tritus.jpg"
+  },
+  {
+    "name": "Salma",
+      "description": "Found in Tulstone sewers, where the party massacred everyone she knew in front of her",
+    "imageUrl": "/assets/sewer_girl.png"
+  },
+  {
+    "name": "Sergeant Pickering",
+    "description": "Tulstone city guard deputy",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Faustus Duval",
+    "description": "Companion of the Coin",
+    "imageUrl": "/assets/faustus.png"
+  },
+  {
+    "name": "Leto",
+    "description": "Owner of the Flaming Snout Inn",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Bugz",
+    "description": "Kingpin of the Tulstone criminal underworld",
+    "imageUrl": "/assets/bugz.png"
+  },
+  {
+    "name": "Skanza",
+    "description": "Bugz's right-hand associate",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Duncan Lott",
+      "description": "A wealthy, self-assured \"adventurer\"",
+    "imageUrl": "/assets/duncan.png"
+  },
+  {
+    "name": "Ignus Sagedich",
+    "description": "An elderly man with a peculiar interest in fire",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Jontus",
+    "description": "Out-of-town associate of Bugz who smuggles skiff to Luscana",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Terflew",
+    "description": "Courier for the Academy of Artificers",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Wilbur",
+    "description": "Night manager at the Flaming Snout Inn",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Pettigrew",
+    "description": "The goodest sleepiest boy ever",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Spirod",
+    "description": "Tulstone dockmaster",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Esmerelda",
+      "description": "Academy of Artificers librarian of famed beauty (level 20 baddie 🥵)",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Luther Badran",
+    "description": "Speaker for the Tulstone High Council",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Lucinda Wigley",
+    "description": "Tulstone High Councillor",
+    "imageUrl": "/assets/lucinda.png"
+  },
+  {
+    "name": "Tanzig Club",
+    "description": "Tulstone High Councillor",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Rhonda Lott",
+    "description": "Tulstone High Councillor",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Billum",
+    "description": "Student at the Academy of Artificers",
+    "imageUrl": "/assets/missing.png"
+  },
+  {
+    "name": "Professor Ludd",
+    "description": "Professor at the Academy of Artificers",
+    "imageUrl": "/assets/missing.png"
   }
 ]

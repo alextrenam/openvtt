@@ -4,7 +4,7 @@ import { readFile } from "fs/promises";
 
 // load JSON manually
 const levels = JSON.parse(
-    await readFile(new URL("./levels.json", import.meta.url))
+    await readFile(new URL("./data/levels.json", import.meta.url))
 );
 
 const firebaseConfig = {

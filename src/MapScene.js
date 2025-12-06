@@ -15,7 +15,7 @@ export default function MapScene({ initialLevelId }) {
     const [windowHeight, setWindowHeight] = useState(window.innerHeight);
     const [mapScale, setMapScale] = useState(1);
     const [activeTool, setActiveTool] = useState(null);
-
+    
     async function fetchMapScale(mapId) {
         try {
             const mapDocRef = doc(db, "levels", mapId, "map", "map");
@@ -36,7 +36,7 @@ export default function MapScene({ initialLevelId }) {
         loadScale();
     }, [levelId]);
 
-    const aspectRatio = 4 / 3;
+    const aspectRatio = 4.245 / 3;
     const mapHeight = windowHeight;
     const mapWidth = mapHeight * aspectRatio;
     const baselineMapScale = 120;
@@ -75,49 +75,66 @@ export default function MapScene({ initialLevelId }) {
                 setActiveTool((t) => (t === "area" ? null : "area"));
             } else if (e.key.toLowerCase() === "f") {
                 setActiveTool((t) => (t === "fog" ? null : "fog"));
+            } else if (e.key.toLowerCase() === "m") {
+		if (activeTool !== "maps") {
+		    setLevelId("caramrac");
+		} else {
+		    setLevelId("fairWatersGangTurf");
+		}   
+                setActiveTool((t) => (t === "maps" ? null : "maps"));
             } else if (e.key === "Escape") {
                 setActiveTool(null);
             } else if (e.key.toLowerCase() === "l") {
                 resetLevel();
-            } else if (e.key === "1") {
-                setLevelId("tulstone");
-            } else if (e.key === "2") {
-                setLevelId("tulstoneSewers");
+	    } else if (activeTool === "maps") {
+		if (e.key === "1") {
+		    setLevelId("caramrac");
+		} else if (e.key === "2") {
+		    setLevelId("tulstone");
+		}
+	    } else if (e.key === "1") {
+		setLevelId("fairWatersGangTurf");
 	    }
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [resetLevel]);
+    }, [resetLevel, activeTool]);
 
     return (
-        <MapLayer width={mapWidth} height={mapHeight} levelId={levelId}>
+            <MapLayer
+	width={mapWidth}
+	height={mapHeight}
+	levelId={levelId}
+	mapMode={activeTool === "maps"}
+	    >
             <FogCanvas
-                width={mapWidth}
-                height={mapHeight}
-                fogEraseMode={activeTool === "fog"}
-                levelId={levelId}
+        width={mapWidth}
+        height={mapHeight}
+        fogEraseMode={activeTool === "fog"}
+        levelId={levelId}
             />
             <TokenLayer
-                tokens={tokens}
-                setTokens={setTokens}
-                mapWidth={mapWidth}
-                mapHeight={mapHeight}
-                levelId={levelId}
-                scaleFactor={tokenScale}
+        tokens={tokens}
+        setTokens={setTokens}
+        mapWidth={mapWidth}
+        mapHeight={mapHeight}
+        levelId={levelId}
+        scaleFactor={tokenScale}
+	mapMode={activeTool === "maps"}
             />
             <RulerOverlay
-                width={mapWidth}
-                height={mapHeight}
-                scaleFactor={scaleFactor}
-                rulerMode={activeTool === "ruler"}
+        width={mapWidth}
+        height={mapHeight}
+        scaleFactor={scaleFactor}
+        rulerMode={activeTool === "ruler"}
             />
             <AreaOverlay
-                width={mapWidth}
-                height={mapHeight}
-                scaleFactor={scaleFactor}
-                areaMode={activeTool === "area"}
+        width={mapWidth}
+        height={mapHeight}
+        scaleFactor={scaleFactor}
+        areaMode={activeTool === "area"}
             />
             <ToolSelector activeTool={activeTool} setActiveTool={setActiveTool} />
-        </MapLayer>
+            </MapLayer>
     );
 }

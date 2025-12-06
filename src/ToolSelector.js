@@ -4,6 +4,7 @@ export default function ToolSelector({ activeTool, setActiveTool }) {
 	{ id: "ruler", icon: "📏", label: "Ruler", key: "R" },
 	{ id: "area", icon: "🔵", label: "Area", key: "A" },
 	{ id: "fog", icon: "☁️", label: "Fog", key: "F" },
+	{ id: "maps", icon: "🧭", label: "Maps", key: "M" },
     ];
 
     const handleClick = (id) => {

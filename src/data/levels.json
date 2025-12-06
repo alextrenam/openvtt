@@ -1,67 +1,18 @@
 {
     "levels": {
-	"testLevel": {
+	"caramrac": {
 	    "map": {
-		"scale": 1,
-		"url": "assets/map.jpg"
+		"scale": 0.00025,
+		"url": "assets/caramrac_faeldoms.jpg"
 	    },
-	    "tokens": {
-		"token1": {
-		    "tokenType": "player",
-		    "label": "Chungus",
-		    "iconUrl": "assets/chungus.jpg",
-		    "size": "normal",
-		    "init_x": 0.4,
-		    "init_y": 0.5,
-		    "x": 0.4,
-		    "y": 0.5,
-		    "locked": false
-		},
-		"token2": {
-		    "tokenType": "player",
-		    "label": "Hugh",
-		    "iconUrl": "assets/hugh.png",
-		    "size": "large",
-		    "init_x": 0.5,
-		    "init_y": 0.5,
-		    "x": 0.5,
-		    "y": 0.5,
-		    "locked": false
-		},
-		"token3": {
-		    "tokenType": "player",
-		    "label": "Tritus",
-		    "iconUrl": "assets/tritus.jpg",
-		    "size": "tiny",
-		    "init_x": 0.5,
-		    "init_y": 0.6,
-		    "x": 0.5,
-		    "y": 0.6,
-		    "locked": false
-		},
-		"token4": {
-		    "tokenType": "ally",
-		    "label": "Banowain",
-		    "iconUrl": "assets/banowain.png",
-		    "size": "normal",
-		    "init_x": 0.4,
-		    "init_y": 0.4,
-		    "x": 0.4,
-		    "y": 0.4,
-		    "locked": false
-		},
-		"token5": {
-		    "tokenType": "enemy",
-		    "label": "Giant Spider",
-		    "iconUrl": "assets/giant_spider.png",
-		    "size": "huge",
-		    "init_x": 0.7,
-		    "init_y": 0.3,
-		    "x": 0.7,
-		    "y": 0.3,
-		    "locked": true
-		}
-	    }
+	    "tokens": {}
+	},
+	"tulstone": {
+	    "map": {
+		"scale": 0.1,
+		"url": "assets/tulstone.png"
+	    },
+	    "tokens": {}
 	},
 	"riverBend": {
 	    "map": {
@@ -474,13 +425,6 @@
 		}
 	    }
 	},
-	"tulstone": {
-	    "map": {
-		"scale": 0.1,
-		"url": "assets/tulstone.png"
-	    },
-	    "tokens": {}
-	},
 	"tulstoneSewers": {
 	    "map": {
 		"scale": 0.8,
@@ -522,7 +466,7 @@
 		},
 		"token4": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 1",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.72,
@@ -533,7 +477,7 @@
 		},
 		"token5": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 2",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.59,
@@ -544,7 +488,7 @@
 		},
 		"token6": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 3",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.64,
@@ -555,7 +499,7 @@
 		},
 		"token7": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 4",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.64,
@@ -566,7 +510,7 @@
 		},
 		"token8": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 5",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.56,
@@ -577,7 +521,7 @@
 		},
 		"token9": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 6",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.51,
@@ -588,7 +532,7 @@
 		},
 		"token10": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 7",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.60,
@@ -599,7 +543,7 @@
 		},
 		"token11": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 8",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.53,
@@ -610,7 +554,7 @@
 		},
 		"token12": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 9",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.17,
@@ -621,7 +565,7 @@
 		},
 		"token13": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 10",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.17,
@@ -632,7 +576,7 @@
 		},
 		"token14": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 11",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.20,
@@ -643,13 +587,120 @@
 		},
 		"token15": {
 		    "tokenType": "enemy",
-		    "label": "Sewer Dweller",
+		    "label": "Sewer Dweller 12",
 		    "iconUrl": "assets/sewer_dweller.png",
 		    "size": "normal",
 		    "init_x": 0.80,
 		    "init_y": 0.95,
 		    "x": 0.80,
 		    "y": 0.95,
+		    "locked": true
+		}
+	    }
+	},
+	"fairWatersGangTurf": {
+	    "map": {
+		"scale": 0.9,
+		"url": "assets/fair_waters_gang_turf.png"
+	    },
+	    "tokens": {
+		"token1": {
+		    "tokenType": "player",
+		    "label": "Chungus",
+		    "iconUrl": "assets/chungus.jpg",
+		    "size": "normal",
+		    "init_x": 0.39,
+		    "init_y": 0.49,
+		    "x": 0.39,
+		    "y": 0.49,
+		    "locked": false
+		},
+		"token2": {
+		    "tokenType": "player",
+		    "label": "Hugh",
+		    "iconUrl": "assets/hugh.png",
+		    "size": "large",
+		    "init_x": 0.44,
+		    "init_y": 0.63,
+		    "x": 0.44,
+		    "y": 0.63,
+		    "locked": false
+		},
+		"token3": {
+		    "tokenType": "player",
+		    "label": "Tritus",
+		    "iconUrl": "assets/tritus.jpg",
+		    "size": "normal",
+		    "init_x": 0.41,
+		    "init_y": 0.56,
+		    "x": 0.41,
+		    "y": 0.56,
+		    "locked": false
+		},
+		"token4": {
+		    "tokenType": "enemy",
+		    "label": "Bandit",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.60,
+		    "init_y": 0.46,
+		    "x": 0.60,
+		    "y": 0.46,
+		    "locked": true
+		},
+		"token5": {
+		    "tokenType": "enemy",
+		    "label": "Bandit",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.57,
+		    "init_y": 0.39,
+		    "x": 0.57,
+		    "y": 0.39,
+		    "locked": true
+		},
+		"token6": {
+		    "tokenType": "enemy",
+		    "label": "Bandit Shaman",
+		    "iconUrl": "assets/bandit_shaman.png",
+		    "size": "normal",
+		    "init_x": 0.66,
+		    "init_y": 0.57,
+		    "x": 0.66,
+		    "y": 0.57,
+		    "locked": true
+		},
+		"token7": {
+		    "tokenType": "enemy",
+		    "label": "Bandit",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.21,
+		    "init_y": 0.72,
+		    "x": 0.21,
+		    "y": 0.72,
+		    "locked": true
+		},
+		"token8": {
+		    "tokenType": "enemy",
+		    "label": "Bandit",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.18,
+		    "init_y": 0.64,
+		    "x": 0.18,
+		    "y": 0.64,
+		    "locked": true
+		},
+		"token9": {
+		    "tokenType": "enemy",
+		    "label": "Bandit",
+		    "iconUrl": "assets/bandit.png",
+		    "size": "normal",
+		    "init_x": 0.24,
+		    "init_y": 0.80,
+		    "x": 0.24,
+		    "y": 0.80,
 		    "locked": true
 		}
 	    }

@@ -2,11 +2,12 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "./firebase"; // Firestore instance
 import DraggableToken from "./DraggableToken";
 
-export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, levelId, scaleFactor }) {
+export default function TokenLayer({ tokens, setTokens, mapWidth, mapHeight, levelId, scaleFactor, mapMode }) {
     // Update token position in Firestore
     async function updateTokenPosition(id, x, y) {
 	const tokenData = tokens[id];
 	if (!tokenData) return;
+	if (mapMode) return;
 
 	await setDoc(doc(db, "levels", levelId, "tokens", id), {
 	    ...tokenData,

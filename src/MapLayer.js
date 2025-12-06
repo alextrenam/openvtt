@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
 
-export default function MapLayer({ width, height, levelId, children }) {
+export default function MapLayer({ width, height, levelId, mapMode, children }) {
     const [mapSrc, setMapSrc] = useState(null);
 
     useEffect(() => {
@@ -34,7 +34,9 @@ export default function MapLayer({ width, height, levelId, children }) {
             width,
             height,
             backgroundImage: mapSrc ? `url(${process.env.PUBLIC_URL}/${mapSrc})` : undefined,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
+	    backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             border: "4px solid black",
             overflow: "hidden",
 	}}
