@@ -32,7 +32,7 @@
   {
     "name": "Sergeant Pickering",
     "description": "Tulstone city guard deputy",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/sergeant_pickering.png"
   },
   {
     "name": "Faustus Duval",
@@ -82,7 +82,7 @@
   {
     "name": "Pettigrew",
     "description": "The goodest sleepiest boy ever",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/pettigrew.png"
   },
   {
     "name": "Spirod",
