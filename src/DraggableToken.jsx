@@ -106,7 +106,7 @@ export default function DraggableToken({
             onContextMenu={(e) => e.preventDefault()} // disable browser menu
             style={{
                 position: "absolute",
-                zIndex: tokenType === "enemy" ? 5 : 20,
+                zIndex: tokenType === "player" ? 20 : 5,
                 left: position.x,
                 top: position.y,
                 width: tokenSizes[tokenSize] * scaleFactor,

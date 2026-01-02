@@ -42,7 +42,7 @@
   {
     "name": "Leto",
     "description": "Owner of the Flaming Snout Inn",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/leto.png"
   },
   {
     "name": "Bugz",
@@ -52,7 +52,7 @@
   {
     "name": "Skanza",
     "description": "Bugz's right-hand associate",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/skanza.png"
   },
   {
     "name": "Duncan Lott",
@@ -62,12 +62,12 @@
   {
     "name": "Ignus Sagedich",
     "description": "An elderly man with a peculiar interest in fire",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/ignus.png"
   },
   {
     "name": "Jontus",
     "description": "Out-of-town associate of Bugz who smuggles skiff to Luscana",
-    "imageUrl": "/assets/missing.png"
+    "imageUrl": "/assets/jontus.png"
   },
   {
     "name": "Terflew",

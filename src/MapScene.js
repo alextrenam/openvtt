@@ -79,7 +79,7 @@ export default function MapScene({ initialLevelId }) {
 		if (activeTool !== "maps") {
 		    setLevelId("caramrac");
 		} else {
-		    setLevelId("fairWatersGangTurf");
+		    setLevelId("tulstoneKeepGroundFloor");
 		}   
                 setActiveTool((t) => (t === "maps" ? null : "maps"));
             } else if (e.key === "Escape") {
@@ -93,7 +93,13 @@ export default function MapScene({ initialLevelId }) {
 		    setLevelId("tulstone");
 		}
 	    } else if (e.key === "1") {
-		setLevelId("fairWatersGangTurf");
+		setLevelId("tulstoneKeepGroundFloor");
+	    } else if (e.key === "2") {
+		setLevelId("tulstoneKeepFirstFloor");
+	    } else if (e.key === "3") {
+		setLevelId("tulstoneKeepSecondFloor");
+	    } else if (e.key === "4") {
+		setLevelId("tulstoneKeepThirdFloor");
 	    }
         };
         window.addEventListener("keydown", handleKeyDown);
